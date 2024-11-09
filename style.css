@@ -1,0 +1,691 @@
+@import url("https://fonts.googleapis.com/css?family=Be+Vietnam:400,500,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --primary-bright-red: hsl(12, 88%, 59%);
+    --primary-dark-blue: hsl(228, 39%, 23%);
+    --dark-grayish-blue: hsl(227, 12%, 61%);
+    --very-dark-blue: hsl(233, 12%, 13%);
+    --very-pale-red: hsl(13, 100%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Be Vietnam', sans-serif;
+    color: var(--very-dark-blue)
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    color: var(--dark-grayish-blue);
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.logo {
+    max-width: 12rem;
+}
+
+.menu-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-list-item a {
+    display: block;
+    color: var(--primary-dark-blue);
+    transition: all 0.5s;
+    font-size: 0.9rem;
+}
+
+.menu-list-item a:hover {
+    color: var(--dark-grayish-blue);
+}
+
+/* Menu hambúrguer oculto no desktop */
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--primary-dark-blue);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+/* button */
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    border-radius: 30px;
+    padding: 12px 30px;
+    background-color: var(--primary-bright-red);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    box-shadow: 0px 10px 10px -5px rgba(205, 70, 25, 0.7);
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: 0.8;
+}
+
+.btn.white {
+    background-color: #fff;
+    color: var(--primary-bright-red);
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+    margin-right: 8rem;
+}
+
+.btn:hover.white,
+.btn:hover.white {
+    opacity: 1;
+    color: hsla(12, 88%, 59%, 50%);
+}
+
+/* background elements */
+.background-container {
+    position: absolute;
+    overflow: hidden;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-pattern {
+    position: absolute;
+    background-image: url(images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bg1 {
+    width: 50vw;
+    height: 110vh;
+    margin-left: 45rem;
+    transform: translateX(100px) translateY(-130px);
+}
+
+.bg2 {
+    opacity: 1;
+    width: 50vw;
+    height: 110vh;
+    margin-right: 130rem;
+    margin-top: 30rem;
+    transform: translateX(202px) translateY(530px);
+}
+
+/* main */
+
+.main-container {
+    position: relative;
+    width: 95%;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+}
+
+.main-text {
+    text-align: start;
+    margin-right: 5rem;
+}
+
+.main-text h1 {
+    font-size: 3rem;
+    line-height: 1.25;
+    max-width: 32vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main-text p {
+    max-width: 25vw;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-image {
+    max-width: 40vw;
+    margin-left: 5rem;
+}
+
+.main-image img {
+    width: 100%;
+}
+
+/* About */
+.about {
+    display: flex;
+    justify-self: space-between;
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+
+.about-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 5rem;
+}
+
+.about-head h2 {
+    max-width: 30vw;
+    margin-bottom: 25px;
+    margin-left: 4rem;
+}
+
+.about-head p {
+    max-width: 330px;
+    font-size: 0.9rem;
+    margin-right: 4rem;
+}
+
+.about-list {
+    max-width: 37vw;
+    margin-left: 10rem;
+    margin-bottom: 2rem;
+}
+
+.about-list h5 {
+    padding: 8px 0px;
+    border-radius: 25px 0px 0px 25px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+.about-list p {
+    margin-bottom: 50px;
+    margin-left: 6rem;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+.number {
+    padding: 8px 25px;
+    border-radius: 25px;
+    color: #fff;
+    background-color: var(--primary-bright-red);
+    margin: 0 10px 0 0;
+}
+
+/* Testimonials */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0 50px; 
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;  /* Oculta o excesso de cards */
+}
+
+.card {
+    flex: 0 0 30%;    /* Cada card ocupa 30% da largura do contêiner */
+    max-width: 45rem;
+    margin: 10px;
+    height: 30vh;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--very-light-gray);
+    padding-top: 2rem;
+    display: none;
+    position: relative;
+}
+
+.card.active {
+    display: block;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card h5 {
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 0.86rem;
+    color: var(--dark-grayish-blue);
+    padding: 2rem;
+}
+
+/* Estilos para o slider, onde apenas um card será exibido em telas pequenas */
+.testimonials {
+    padding: 2rem;
+}
+
+.card {
+    display: none;
+}
+
+.card.active {
+    display: block;
+}
+
+/* CTA */
+
+.call-to-action {
+    background-color: var(--primary-bright-red);
+    background-image: url(./images/bg-simplify-section-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+}
+
+.call-to-action h2 {
+    color: #fff;
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 0 0px;
+    margin-left: 8rem;
+    text-align: start;
+}
+
+.cta-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between
+}
+
+/*footer*/
+footer {
+    background-color: var(--very-dark-blue);
+    color: var(--very-light-gray);
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-bright-red {
+    color: var(--primary-bright-red);
+}
+
+.text {
+    font-style: bold;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    font-size: 0.7rem;
+    margin-top: 2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.social img {
+    transition: filter 0.3s ease;
+}
+
+.social:hover img {
+    filter: brightness(0) saturate(100%) invert(38%) sepia(78%) saturate(1000%) hue-rotate(-10deg) brightness(95%) contrast(105%);
+}
+
+#footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.footer-links {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer-links a {
+    color: var(--very-light-gray);
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.footer-links a:hover {
+    color: var(--primary-bright-red);
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+}
+
+.email-form {
+    width: 100%;
+    max-width: 310px;
+    position: relative;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.email-form input {
+    width: 100%;
+    max-width: 240px;
+    padding: 14px;
+    border: #fff 2px solid;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-right: 0.6rem;
+}
+
+.email-form input:focus,
+.email-form button:focus {
+    outline: none;
+}
+
+.email-form.error input {
+    border: var(--primary-bright-red) 2px solid;
+    color: var(--primary-bright-red);
+}
+
+.email-form input::placeholder {
+    color: var(--dark-grayish-blue);
+}
+
+.email-form button {
+    cursor: pointer;
+    padding: 15px 22px;
+    border-radius: 30px;
+    border: 1px solid var(--primary-bright-red);
+    background: var(--primary-bright-red);
+    color: #fff;
+}
+
+.email-form button:hover,
+.email-form button:focus {
+    background-color: hsl(12, 88%, 69%);
+    border: 1px solid hsl(12, 88%, 69%);
+}
+
+.email-form button:active,
+.email-form button:focus {
+    transform: scale(0.9);
+}
+
+.email-form small {
+    position: absolute;
+    color: var(--primary-bright-red);
+    font-size: 10px;
+    bottom: -20px;
+    left: 15px;
+    z-index: 2;
+}
+
+.attribution {
+    background-color: var(--very-dark-blue);
+    font-size: 11px;
+    text-align: center;
+    color: var(--dark-grayish-blue);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 2rem;
+    }
+
+    .btn-header {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        z-index: 1001;
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu-list {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 35vh;
+        flex-direction: column;
+        background: white;
+        border: solid 1px var(--very-light-gray);
+        border-radius: 5px;
+        box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+        z-index: 1000;
+        align-items: center;
+        padding-top: 1rem;
+    }
+
+    .menu-list a {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .menu-list.ativo {
+        right: 0;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .main-text {
+        margin-right: 0;
+    }
+
+    .main-text h1 {
+        font-size: 2.2rem;
+        max-width: 100%;
+        width: 90vw;
+        text-align: center;
+    }
+
+    .main-text p {
+        max-width: 100%;
+        text-align: justify;
+        margin: 1rem;
+    }
+
+    .main-image {
+        margin-left: 0;
+        margin-bottom: 3rem;
+        width: 20rem;
+        max-width: 1200px;
+        height: auto;
+    }
+
+    .btn {
+        margin-left: 7rem;
+        margin-top: 2rem;
+    }
+
+    .about {
+        flex-direction: column;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .about-head {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .about-head h2 {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .about-head p {
+        max-width: 100%;
+        margin-right: 0;
+        width: 80vw;
+    }
+
+    .about-list {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .about-card h5 {
+        background-color: var(--very-pale-red);
+        line-height: 2;
+        margin: 0;
+    }
+
+    .about-card p {
+        margin-left: 1rem;
+        margin-right: 0;
+        line-height: 1.5;
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    .card {
+        display: none;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card p {
+        font-size: 1rem;
+        align-items: justify;
+    }
+
+    .card.active {
+        display: block;
+    }
+
+    .testimonials .btn {
+        margin: 0;
+    }
+
+    .call-to-action {
+        height: auto;
+        padding: 3rem 1.5rem;
+    }
+
+    .call-to-action h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-container .btn.white {
+        margin-right: 0;
+        margin-right: 6rem;
+    }
+
+    footer {
+        position: relative;
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .footer-form {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .footer-form .copy {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    #footer-links {
+        gap: 2rem;
+    }
+
+    .email-form {
+        width: 90vw;
+        margin-top: 1rem;
+    }
+
+}
